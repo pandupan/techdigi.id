@@ -24,7 +24,7 @@ export default function RootLayout({
           {/*<div className="mt-20"> */}
             {children}
           {/* </div>*/}
-          {/* <Footer/>  */}
+          <Footer/> 
         {/*</div> */}
       </body>
     </html>
