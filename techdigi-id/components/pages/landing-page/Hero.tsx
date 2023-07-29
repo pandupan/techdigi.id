@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ heading, message }) => {
   return (
-    <div className="flex items-center h-[100vh] mb-[10rem] bg-fixed bg-center bg-cover hero-img">
+    <div className="flex w-full items-center h-[100vh] mb-[10rem] bg-fixed bg-center bg-cover hero-img">
       {/*Overlayer*/}
       <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]'/>
       

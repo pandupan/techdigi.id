@@ -13,7 +13,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        colorful: {
+            blue : {
+              DEFAULT: "#3da9fc",
+              dark:"#094067"
+            },
+            red:{
+              DEFAULT:"#ef4565"
+            },
+            sky:{
+              DEFAULT:"#d8eefe"
+            }
+        }
+      }
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin',"daisyui")],
 }

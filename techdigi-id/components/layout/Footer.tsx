@@ -9,15 +9,15 @@ const Footer = () => {
       <footer className="bg-white">
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
           <div className="w-full h-auto px-4 py-6 lg:pt-8">
-              <div className="md:flex md:justify-between">
+              <div className="flex flex-wrap justify-center sm:flex sm:justify-between">
                 <div className="mb-6 md:mb-0">
                     <div className="flex items-center">
                         <Image
-                            src="/assets/images/Logo.png"
-                            width={120}
-                            height={120}
+                            src="/images/Logo.png"
+                            width={100}
+                            height={100}
                             alt="Logo Company"
-                            className="ml-8 mr-3"
+                            className="sm:ml-8 mr-8 sm:mr-3"
                         />
                     </div>
                 </div>

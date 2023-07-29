@@ -35,7 +35,7 @@ const Header = () => {
         <Link href='/'>
           <div className='flex items-center justify-center'>
           <Image
-            src="/assets/images/Logo.png"
+            src="/images/Logo.png"
             width={100}
             height={100}
             alt="Logo Company"
