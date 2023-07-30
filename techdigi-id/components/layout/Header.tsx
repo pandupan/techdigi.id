@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <div style={{backgroundColor:`${color}`}} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[11240px] m-auto flex justify-between items-center text-white my-[6px]">
-        <Link href='/'>
+        <Link href='#hero'>
           <div className='flex items-center justify-center'>
           <Image
             src="/images/logo.png"

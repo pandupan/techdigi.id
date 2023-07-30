@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 
 interface HeroProps {
   heading: string;
@@ -16,7 +17,9 @@ const Hero: React.FC<HeroProps> = ({ heading, message }) => {
           <div className='ml-[10rem] sm:w-[800px] sm:pl-[120px] mt-10'>
             <h2 className='text-2xl sm:text-4xl'>{heading}</h2>
             <p className='py-5 text-3xl font-semibold tracking-[3px] italic'>{message}</p>
-            <button className='px-8 py-2 border rounded-lg mt-4'>Contact Us</button>
+            <button className='px-8 py-2 border rounded-lg mt-4'>
+              <Link href='#contact'>Contact Us</Link>
+            </button>
           </div>
         </div>
       </div>
