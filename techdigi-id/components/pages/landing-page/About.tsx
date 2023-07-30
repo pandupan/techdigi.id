@@ -44,7 +44,7 @@ const About = () => {
         <div className="sm:container overflow-x-hidden">
           <h1 className="text-3xl sm:text-5xl md:text-7xl uppercase flex flex-col lg:max-h-[150px] lg:gap-2 font-medium">
           <motion.span
-              className="bg-colorful-blue"
+              className="bg-colorfull-blue"
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -60,7 +60,7 @@ const About = () => {
               About
             </motion.span>
             <motion.span
-              className="pl-10 text-colorful-red"
+              className="pl-10 text-colorfull-red"
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -77,7 +77,7 @@ const About = () => {
           >
             <h1 className="text-3xl sm:text-4xl tracking-widest uppercase font-bold">Tech Digi Indonesia.</h1>
             <p className="sm:text-2xl max-w-3xl mt-4">
-              <span className="text-colorful-blue font-semibold">Techdigi.id</span>  bergerak dibidang jasa berbasis teknologi diantaran pembuatan<span className="text-colorful-red font-semibold">  Creative Content, Branding Marketing, Web developer, Mobile Apps, Fotography, serta Konsulatasi digital.</span> perusahaan yang memiliki visioner yang terfokus pada pengembangan bisnis terintegrasi berbasis teknologi dan informasi
+              <span className="text-colorfull-blue font-semibold">Techdigi.id</span>  bergerak dibidang jasa berbasis teknologi diantaran pembuatan<span className="text-colorfull-red font-semibold">  Creative Content, Branding Marketing, Web developer, Mobile Apps, Fotography, serta Konsulatasi digital.</span> perusahaan yang memiliki visioner yang terfokus pada pengembangan bisnis terintegrasi berbasis teknologi dan informasi
             </p>
             <ul className="pl-10 sm:text-2xl mt-4 list-disc max-w-xl">
               <li>Pengembangan sistem bisnis berbasis teknologi dan informasi.</li>

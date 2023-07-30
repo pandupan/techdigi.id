@@ -14,7 +14,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        colorful: {
+        colorfull: {
             blue : {
               DEFAULT: "#3da9fc",
               dark:"#094067"
@@ -24,7 +24,11 @@ module.exports = {
             },
             sky:{
               DEFAULT:"#d8eefe"
-            }
+            },
+            purple: "#DF63F2",
+            yellow: "#F7BD02",
+            green: "#17EE97",
+            
         }
       }
     },

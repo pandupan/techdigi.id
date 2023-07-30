@@ -15,3 +15,18 @@ export const itemShow = (duration: number = .8, usingScale = true) => ({
     },
   },
 });
+
+export const containerShow = {
+  intial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      delayChildren: 0.5,
+      staggerChildren: 0.2,
+      ease: 'easeInOut',
+    },
+  },
+};
