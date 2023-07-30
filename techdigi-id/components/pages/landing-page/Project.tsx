@@ -7,12 +7,12 @@ import { BiLinkExternal } from 'react-icons/bi'
 import { motion } from 'framer-motion'
 import { containerShow, itemShow } from '@/components/lib/animate'
 
-function Client() {
+function Project() {
   return (
-    <section id="client">
+    <section id="project">
       <div className="container py-10 mx-auto">
         <div className="flex items-end gap-2">
-          <h1 className="text-3xl sm:text-7xl uppercase ml-2">Our Client</h1>
+          <h1 className="text-3xl sm:text-7xl uppercase ml-2">Our Project</h1>
         </div>
         <motion.div
           variants={containerShow}
@@ -53,4 +53,4 @@ function Client() {
   )
 }
 
-export default Client
+export default Project

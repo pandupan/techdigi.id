@@ -10,7 +10,7 @@ import {SlCalender} from 'react-icons/sl'
 
 function Proces() {
   return (
-    <>
+    <section id="process">
       <div className='flex flex-col justify-center items-center w-full h-auto py-20'>
         <div className="container flex justify-center items-center mb-10">
           <h1 className="w-max text-3xl sm:text-5xl md:text-7xl uppercase flex flex-col gap-y-2">
@@ -122,7 +122,7 @@ function Proces() {
         </div>
 
       </div>
-    </>
+    </section>
   )
 }
 

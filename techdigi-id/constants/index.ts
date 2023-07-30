@@ -26,3 +26,31 @@ export const contacts = [
     link: 'https://www.instagram.com/techdigi.id/'
   },
 ];
+
+export const navigation = [
+  {
+    id: 'home',
+    href: '#home',
+    title: 'Home'
+  },
+  {
+    id: 'about',
+    href: '#about',
+    title: 'About Us'
+  },
+  {
+    id: 'services',
+    href: '#services',
+    title: 'Services'
+  },
+  {
+    id: 'projects',
+    href: '#projects',
+    title: 'Projects'
+  },
+  {
+    id: 'contact',
+    href: '#contact',
+    title: 'Contact Me'
+  },
+]

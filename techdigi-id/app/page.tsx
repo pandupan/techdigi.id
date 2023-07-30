@@ -1,5 +1,5 @@
 import About from '@/components/pages/landing-page/About'
-import Client from '@/components/pages/landing-page/Client'
+import Project from '@/components/pages/landing-page/Project'
 import Contact from '@/components/pages/landing-page/Contact'
 import Hero from '@/components/pages/landing-page/Hero'
 import Proces from '@/components/pages/landing-page/Proces'
@@ -16,7 +16,7 @@ export default function Home() {
             <About/>
             <Service/>
             <Proces/>
-            <Client/>
+            <Project/>
             <Contact/>
       </>
   )

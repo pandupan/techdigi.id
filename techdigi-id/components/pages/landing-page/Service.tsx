@@ -44,7 +44,7 @@ const Service = () => {
       <Card
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc="/images/hero-section1.png"
-        className="w-[200px] sm:w-1/4 my-2"
+        className="w-[250px] sm:w-1/4 my-2"
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           <p>
@@ -60,7 +60,7 @@ const Service = () => {
       <Card
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc="/images/hero-section1.png"
-        className="w-[200px] md:w-1/4"
+        className="w-[250px] md:w-1/4"
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           <p>
@@ -76,7 +76,7 @@ const Service = () => {
       <Card
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc="/images/hero-section1.png"
-        className="w-[200px] md:w-1/4"
+        className="w-[250px] md:w-1/4"
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           <p>
