@@ -83,13 +83,13 @@ const Header = () => {
               <Link href='#hero'>Home</Link>
             </li>
             <li className='p-4 text-4xl hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold'>
-              <Link href='#product'>Product</Link>
+              <Link href='#services'>Product</Link>
             </li>
             <li className='p-4 text-4xl hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold'>
               <Link href='#process'>Process</Link>
             </li>
             <li className='p-4 text-4xl hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold'>
-              <Link href='#project'>Project</Link>
+              <Link href='#projects'>Project</Link>
             </li>
             <li className='p-4 text-4xl hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold'>
               <Link href='#about'>About Us</Link>
