@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { containerShow, itemShow } from '@/components/lib/animate'
 import Link from 'next/link'
 import { contacts } from '@/constants'
-
+import {BsWhatsapp} from 'react-icons/bs'
 
 function Contact() {
   return (
@@ -106,6 +106,9 @@ function Contact() {
                   <div className="col-span-2">
                     <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white">
                       Submit
+                    </button>
+                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2">
+                      Contact Us Via Whatsapp 
                     </button>
                   </div>
                 </div>
