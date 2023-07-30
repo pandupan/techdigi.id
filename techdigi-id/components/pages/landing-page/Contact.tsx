@@ -6,6 +6,7 @@ import { containerShow, itemShow } from '@/components/lib/animate'
 import Link from 'next/link'
 import { contacts } from '@/constants'
 
+
 function Contact() {
   return (
     <>
@@ -56,17 +57,17 @@ function Contact() {
                 {contacts.map((item) => {
                   if (item?.link) return (
                     <motion.div key={item.id} variants={itemShow()}>
-                      <Link target="_blank" rel="noopener noreferrer" href={item.link} className="flex items-center font-thin gap-4 text-colorfull-green">
+                      <Link target="_blank" rel="noopener noreferrer" href={item.link} className="flex items-center font-medium gap-4 text-colorfull-black">
                         <item.Icon fontSize={24} />
-                        <span className="text-xs sm:text-base text-black underline underline-offset-4">{item.value}</span>
+                        <span className="text-lg sm:text-base text-black underline underline-offset-4">{item.value}</span>
                       </Link>
                     </motion.div>
                   );
                   
                   return (
-                    <motion.div variants={itemShow()} key={item.id} className="flex items-center font-thin gap-4 text-colorfull-green">
+                    <motion.div variants={itemShow()} key={item.id} className="flex items-center font-medium gap-4 text-black">
                       <item.Icon fontSize={24} />
-                      <span className="text-black text-xs sm:text-base">{item.value}</span>
+                      <span className="text-black text-lg sm:text-base">{item.value}</span>
                     </motion.div>
                   )
                 })}
@@ -103,7 +104,7 @@ function Contact() {
                       ></textarea>
                   </div>
                   <div className="col-span-2">
-                    <button className="w-full px-10 py-4 rounded-full btn-gradient-3">
+                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white">
                       Submit
                     </button>
                   </div>

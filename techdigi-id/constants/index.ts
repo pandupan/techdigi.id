@@ -7,22 +7,22 @@ export const contacts = [
   {
     id: 'email',
     Icon: MdEmail,
-    value: 'futurusticdesigners@gmail.com'
+    value: 'techdigiadmin@gmail.com'
   },
   {
     id: 'phone',
     Icon: HiPhone,
-    value: '068 947 3833'
+    value: '0822-1987-9696'
   },
   {
     id: 'address',
     Icon: MdLocationPin,
-    value: 'Tirana, Albania'
+    value: 'NextSpace Jl.Trunojoyo No.11, Bandung'
   },
   {
     id: 'instagram',
     Icon: BiLogoInstagramAlt,
-    value: '@futurusticdesigners',
-    link: 'https://www.instagram.com/futurusticdesigners'
+    value: '@techdigi.id',
+    link: 'https://www.instagram.com/techdigi.id/'
   },
 ];

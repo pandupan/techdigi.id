@@ -41,20 +41,19 @@ function Proces() {
           </h1>
         </div>
 
-        <div className="container flex flex-col w-full h-[600px] md:flex-row">
+        <div className="container flex flex-col w-full h-auto sm:h-[600px] md:flex-row">
           <div className="flex justify-end items-end mx-auto my-4">
             <Card
-              className="max-w-sm"
-              href="#"
+              className="m-6 max-w-sm"
             >
               <TbTargetArrow size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <p>
+                <span>
                   Making Project
-                </p>
+                </span>
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                <p>
+                <span>
                 Tdi membuat program dan
                     konten bersama dengan
                     mitra bisnis. Program yang
@@ -66,23 +65,22 @@ function Proces() {
                     melakukan penyesuaian
                     dengan kebutuhan mitra
                     bisnis.
-                </p>
+                </span>
               </p>
             </Card>
           </div>
           <div className="flex justify-center items-center mx-auto my-4">
             <Card
-              className="max-w-sm"
-              href="#"
+              className="m-6 max-w-sm"
             >
               <HiMiniTrophy size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <p>
+                <span>
                   Management Project
-                </p>
+                </span>
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                <p>
+                <span>
                 melakukan analisis bisnis
                 model serta melakukan
                 management process
@@ -92,23 +90,22 @@ function Proces() {
                 tata kelola management,
                 tata kelola basis data dan
                 branding product/company.
-                </p>
+                </span>
               </p>
             </Card>
           </div>
           <div className="flex justify-start items-start mx-auto my-4">
             <Card
-              className="max-w-sm"
-              href="#"
+              className="m-6 max-w-sm"
             >
               <SlCalender size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <p>
+                <span>
                   Monitoring Project
-                </p>
+                </span>
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                <p>
+                <span>
                 Monitoring
                 dilakukan agar kami
                 bisa melakukan Pengawasan
@@ -116,7 +113,7 @@ function Proces() {
                 analisis dan perbaikan/saran
                 pada system yang ada pada
                 mitra kerja.
-                </p>
+                </span>
               </p>
             </Card>
           </div>
