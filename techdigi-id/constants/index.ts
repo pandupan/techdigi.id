@@ -30,7 +30,7 @@ export const contacts = [
 export const navigation = [
   {
     id: 'home',
-    href: '#home',
+    href: '#hero',
     title: 'Home'
   },
   {
@@ -42,6 +42,11 @@ export const navigation = [
     id: 'services',
     href: '#services',
     title: 'Services'
+  },
+  {
+    id: 'process',
+    href: '#process',
+    title: 'Process'
   },
   {
     id: 'projects',

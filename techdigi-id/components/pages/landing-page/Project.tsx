@@ -9,7 +9,7 @@ import { containerShow, itemShow } from '@/components/lib/animate'
 
 function Project() {
   return (
-    <section id="project">
+    <section id="projects">
       <div className="container py-10 mx-auto">
         <div className="flex items-end gap-2">
           <h1 className="text-3xl sm:text-7xl uppercase ml-2">Our Project</h1>
