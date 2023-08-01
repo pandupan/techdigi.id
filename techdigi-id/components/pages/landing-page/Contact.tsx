@@ -43,16 +43,12 @@ function Contact() {
   };
 
   const handleWhatsAppClick = () => {
-    // Get all the form data fields
     const { name, email, subject, message } = formData;
     
-    // Construct the message text with all the form data
     const messageText = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
     
-    // Construct the WhatsApp link with the provided number and message text
     const whatsappLink = `https://wa.me/+6282219879696?text=${encodeURIComponent(messageText)}`;
     
-    // Open WhatsApp with the constructed link
     window.open(whatsappLink, '_blank');
   };
   
