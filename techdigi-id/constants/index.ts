@@ -7,7 +7,7 @@ export const contacts = [
   {
     id: 'email',
     Icon: MdEmail,
-    value: 'techdigiadmin@gmail.com'
+    value: 'admintechdigi@gmail.com'
   },
   {
     id: 'phone',

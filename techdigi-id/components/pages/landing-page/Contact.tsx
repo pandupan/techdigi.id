@@ -1,13 +1,57 @@
 'use client'
 
-import React from 'react'
+import React, {useState, ChangeEvent} from 'react'
 import { motion } from 'framer-motion'
 import { containerShow, itemShow } from '@/components/lib/animate'
 import Link from 'next/link'
 import { contacts } from '@/constants'
-import {BsWhatsapp} from 'react-icons/bs'
 
 function Contact() {
+
+    const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(`${name}: ${value}`);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
+    const { name, email, subject, message } = formData;
+    const messageText = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
+  
+    // Atur kembali form setelah berhasil mengirim
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  };
+
+  const handleWhatsAppClick = () => {
+    // Get all the form data fields
+    const { name, email, subject, message } = formData;
+    
+    // Construct the message text with all the form data
+    const messageText = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+    
+    // Construct the WhatsApp link with the provided number and message text
+    const whatsappLink = `https://wa.me/082219879696?text=${encodeURIComponent(messageText)}`;
+    
+    // Open WhatsApp with the constructed link
+    window.open(whatsappLink, '_blank');
+  };
+  
+  
+
   return (
     <section id="contact">
       <div className="container flex items-center justify-center w-full min-h-[500px] py-20 mx-auto">
@@ -74,40 +118,52 @@ function Contact() {
               </motion.div>
             </div>
             <div className="lg:basis-[50%]">
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <input
                       type="text"
                       className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Your name"
+                      name='name'
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Email Address"
+                      name='email'
                       />
                   </div>
                   <div className="col-span-2">
                     <input
                       type="text"
                       className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                      value={formData.subject}
+                      onChange={handleChange}
                       placeholder="Subject"
+                      name='subject'
                     />
                   </div>
                   <div className="col-span-2">
                     <textarea
                       className="w-full h-[200px] sm:h-[250px] bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black resize-none"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder="Message"
+                      name='message'
                       ></textarea>
                   </div>
                   <div className="col-span-2">
-                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white">
+                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white" type='submit'>
                       Submit
                     </button>
-                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2">
+                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2 " onClick={handleWhatsAppClick}>
                       Contact Us Via Whatsapp 
                     </button>
                   </div>
