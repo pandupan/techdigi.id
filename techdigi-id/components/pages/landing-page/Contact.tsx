@@ -5,15 +5,21 @@ import { motion } from 'framer-motion'
 import { containerShow, itemShow } from '@/components/lib/animate'
 import Link from 'next/link'
 import { contacts } from '@/constants'
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
-
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
+
+  const [nameError, setNameError] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [subjectError, setSubjectError] = useState<string | null>(null);
+  const [messageError, setMessageError] = useState<string | null>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,19 +27,60 @@ function Contact() {
     console.log(`${name}: ${value}`);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEmailClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-  
+
+    // Check for validations
+    if (!validateName(formData.name)) {
+      setNameError('Name should have at least 2 words.');
+      return;
+    } else {
+      setNameError(null);
+    }
+
+    if (!validateEmail(formData.email)) {
+      setEmailError('Invalid email address.');
+      return;
+    } else {
+      setEmailError(null);
+    }
+
+    if (!validateSubject(formData.subject)) {
+      setSubjectError('Subject should have at least 2 words.');
+      return;
+    } else {
+      setSubjectError(null);
+    }
+
+    if (!validateMessage(formData.message)) {
+      setMessageError('Message should have at least 5 words.');
+      return;
+    } else {
+      setMessageError(null);
+    }
+
     const { name, email, subject, message } = formData;
     const messageText = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
 
     const mailtoLink = `mailto:admintechdigi@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(messageText)}`;
-  
+
     window.location.href = mailtoLink;
-  
-    // Atur kembali form setelah berhasil mengirim
+
+    // Show success toast when the email is sent successfully
+    toast.success('Email sent successfully!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+
+    // Reset form after successful email send
     setFormData({
       name: '',
       email: '',
@@ -42,17 +89,84 @@ function Contact() {
     });
   };
 
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    // Check for validations
+    if (!validateName(formData.name)) {
+      setNameError('Name should have at least 2 words.');
+      return;
+    } else {
+      setNameError(null);
+    }
+
+    if (!validateEmail(formData.email)) {
+      setEmailError('Invalid email address.');
+      return;
+    } else {
+      setEmailError(null);
+    }
+
+    if (!validateSubject(formData.subject)) {
+      setSubjectError('Subject should have at least 2 words.');
+      return;
+    } else {
+      setSubjectError(null);
+    }
+
+    if (!validateMessage(formData.message)) {
+      setMessageError('Message should have at least 5 words.');
+      return;
+    } else {
+      setMessageError(null);
+    }
+
     const { name, email, subject, message } = formData;
-    
+
     const messageText = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-    
+
     const whatsappLink = `https://wa.me/+6282219879696?text=${encodeURIComponent(messageText)}`;
-    
+
     window.open(whatsappLink, '_blank');
+
+    // Show success toast when the WhatsApp message is sent successfully
+    toast.success('Message sent via WhatsApp!', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+
+    // Reset form after successful WhatsApp message send
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
   };
-  
-  
+
+  // Validation functions
+  const validateName = (name: string) => {
+    return name.trim().split(' ').filter(Boolean).length >= 2;
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateSubject = (subject: string) => {
+    return subject.trim().split(' ').filter(Boolean).length >= 2;
+  };
+
+  const validateMessage = (message: string) => {
+    return message.trim().split(' ').filter(Boolean).length >= 5;
+  };
 
   return (
     <section id="contact">
@@ -120,57 +234,97 @@ function Contact() {
               </motion.div>
             </div>
             <div className="lg:basis-[50%]">
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="text"
-                      className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      name='name'
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email Address"
-                      name='email'
-                      />
-                  </div>
-                  <div className="col-span-2">
-                    <input
-                      type="text"
-                      className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="Subject"
-                      name='subject'
-                    />
-                  </div>
-                  <div className="col-span-2">
-                    <textarea
-                      className="w-full h-[200px] sm:h-[250px] bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black resize-none"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Message"
-                      name='message'
-                      ></textarea>
-                  </div>
-                  <div className="col-span-2">
-                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white" type='submit'>
-                      Submit
-                    </button>
-                    <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2 " onClick={handleWhatsAppClick}>
-                      Contact Us Via Whatsapp 
-                    </button>
-                  </div>
+            <form>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <input
+                    type="text"
+                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    name="name"
+                  />
+                  {nameError && <span className="text-red-500">{nameError}</span>}
                 </div>
-              </form>
+                <div>
+                  <input
+                    type="email"
+                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Email Address"
+                    name="email"
+                  />
+                  {emailError && <span className="text-red-500">{emailError}</span>}
+                </div>
+                <div className="col-span-2">
+                  <input
+                    type="text"
+                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Subject"
+                    name="subject"
+                  />
+                  {subjectError && <span className="text-red-500">{subjectError}</span>}
+                </div>
+                <div className="col-span-2">
+                  <textarea
+                    className="w-full h-[200px] sm:h-[250px] bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black resize-none"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Message"
+                    name="message"
+                  />
+                  {messageError && <span className="text-red-500">{messageError}</span>}
+                </div>
+                <div className="col-span-2">
+                  <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white" onClick={handleEmailClick}>
+                    Submit
+                  </button>
+                  <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2 " onClick={handleWhatsAppClick}>
+                    Contact Us Via Whatsapp
+                  </button>
+                </div>
+              </div>
+            </form>
+              <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+              />
+              <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+              />
+              <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+              />
             </div>
           </div>
         </div>
