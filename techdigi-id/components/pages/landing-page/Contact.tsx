@@ -26,6 +26,12 @@ function Contact() {
   
     const { name, email, subject, message } = formData;
     const messageText = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
+
+    const mailtoLink = `mailto:admintechdigi@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(messageText)}`;
+  
+    window.location.href = mailtoLink;
   
     // Atur kembali form setelah berhasil mengirim
     setFormData({
@@ -44,7 +50,7 @@ function Contact() {
     const messageText = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
     
     // Construct the WhatsApp link with the provided number and message text
-    const whatsappLink = `https://wa.me/082219879696?text=${encodeURIComponent(messageText)}`;
+    const whatsappLink = `https://wa.me/+6282219879696?text=${encodeURIComponent(messageText)}`;
     
     // Open WhatsApp with the constructed link
     window.open(whatsappLink, '_blank');
