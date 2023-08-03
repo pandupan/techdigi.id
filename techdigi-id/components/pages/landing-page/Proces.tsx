@@ -42,6 +42,7 @@ function Proces() {
         </div>
 
         <div className="container flex flex-col w-full h-auto sm:h-[600px] md:flex-row">
+          
           <div className="flex justify-end items-end mx-auto my-4">
             <Card
               className="m-6 max-w-sm"

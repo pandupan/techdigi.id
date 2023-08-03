@@ -4,7 +4,6 @@ import Contact from '@/components/pages/landing-page/Contact'
 import Hero from '@/components/pages/landing-page/Hero'
 import Proces from '@/components/pages/landing-page/Proces'
 import Service from '@/components/pages/landing-page/Service'
-import Image from 'next/image'
 
 export default function Home() {
   return (
