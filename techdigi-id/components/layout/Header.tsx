@@ -4,6 +4,15 @@ import Link from 'next/link'
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { Popover } from '@headlessui/react'
+import {RiArrowDropDownLine} from 'react-icons/ri'
+import {BsBrowserEdge} from 'react-icons/bs'
+import {FaNetworkWired} from 'react-icons/fa'
+import {SiBrandfolder} from 'react-icons/si'
+import {TbTargetArrow} from 'react-icons/tb'
+import {HiMiniTrophy} from 'react-icons/hi2'
+import {SlCalender} from 'react-icons/sl'
+
 
 const Header = () => {
   const [nav, setNav] = useState(false)
@@ -47,20 +56,68 @@ const Header = () => {
           </div>
           </div>
         </Link>
-        <ul style={{color:`${textColor}`}} className='hidden sm:flex font-semibold mr-4'>
-          <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
-            <Link href='#services'>Product</Link>
-          </li>
-          <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
-            <Link href='#process'>Process</Link>
-          </li>
-          <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
-            <Link href='#projects'>Project</Link>
-          </li>
-          <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
-            <Link href='#about'>About Us</Link>
-          </li>
-        </ul>
+        
+          <ul style={{color:`${textColor}`}} className='hidden sm:flex font-semibold mr-4'>
+
+            <Popover>
+                <Popover.Button>
+                  <li className='flex justify-center items-center p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
+                    Product
+                    <RiArrowDropDownLine size={30}/>
+                  </li>
+                </Popover.Button>
+
+                <Popover.Panel className="absolute top-[95px] z-10 w-[200px] h-auto border border-gray-500 text-black bg-white rounded-md ">
+                  <div className="flex flex-col gap-4 py-2">
+                    <div className='flex items-center border-b-2 border-gray-300'>
+                      <BsBrowserEdge size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Web Developer</a>
+                    </div>
+                    <div className='flex items-center border-b-2 border-gray-300'>
+                      <SiBrandfolder size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Brand Marketing</a>
+                    </div>
+                    <div className='flex items-center border-b-2'>
+                      <FaNetworkWired size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Technology and Networking</a>
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Popover>
+
+              <Popover>
+                <Popover.Button>
+                  <li className='flex justify-center items-center p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
+                    <Link href='#'>Process</Link>
+                    <RiArrowDropDownLine size={30}/>
+                  </li> 
+                </Popover.Button>
+                <Popover.Panel className="absolute top-[95px] z-10 w-[200px] h-auto border border-gray-500 text-black bg-white rounded-md ">
+                  <div className="flex flex-col gap-4 py-2">
+                    <div className='flex items-center border-b-2 border-gray-300'>
+                      <TbTargetArrow size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Making Project</a>
+                    </div>
+                    <div className='flex items-center border-b-2 border-gray-300'>
+                      <HiMiniTrophy size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Management Project</a>
+                    </div>
+                    <div className='flex items-center border-b-2'>
+                      <SlCalender size={20} className="m-2"/>
+                      <a href="#" className='p-2 text-gray-800'>Monitoring Project</a>
+                    </div>
+                  </div>
+                </Popover.Panel>
+              </Popover>
+
+
+            <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
+              <Link href='#projects'>Project</Link>
+            </li>
+            <li className='p-4 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold '>
+              <Link href='#about'>About Us</Link>
+            </li>
+          </ul>
 
         {/*Hamburger Button*/}
         <div className='block sm:hidden z-10 p-2' onClick={handleNav}>
