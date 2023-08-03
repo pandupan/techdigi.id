@@ -39,7 +39,7 @@ const Header = () => {
 
 
   return (
-    <div style={{backgroundColor:`${color}`}} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+    <div style={{backgroundColor:`${color}`}} className="fixed left-0 top-0 w-full z-[999] ease-in duration-300">
       <div className="max-w-[11240px] m-auto flex justify-between items-center text-white my-[6px]">
         <Link href='#hero'>
           <div className='flex flex-col items-center justify-center'>
