@@ -51,12 +51,12 @@ const Header = () => {
                 alt="Logo Company"
                 className="sm:ml-4 sm:p-4 mr-2 ml-1 p-2 w-[50px] h-[35px] sm:w-auto sm:h-auto "
               />
-              <div className='ml-2 sm:ml-8 text-xs sm:tracking-[2.5px]' style={{color:`${textColor}`}}>
+              <div className='ml-2 sm:ml-8 text-sm sm:tracking-[2.5px]' style={{color:`${textColor}`}}>
                 <h2 className='font-bold'>TECH DIGI</h2>       
                 <h2 className='font-bold'>INDONESIA</h2>       
               </div>
             </div>
-            <div className='ml-2 sm:ml-4 text-xs sm:tracking-[1.5px]' style={{color:`${textColor}`}}>
+            <div className='ml-2 sm:ml-4 text-base sm:tracking-[1.5px]' style={{color:`${textColor}`}}>
               <h2 className='font-semibold italic '>&quot;Wujudkan Inovasi Digitalmu!&quot;</h2>             
             </div>
           </div>
