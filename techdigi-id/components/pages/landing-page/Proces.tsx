@@ -12,9 +12,9 @@ function Proces() {
   return (
     <section id="process" className='container mx-auto relative'>
       <div className='z-10'>
-        <div className="absolute top-[20%] right-[30%] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
-        <div className="absolute top-[5%] left-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
-        <div className="absolute bottom-[5%] right-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
+        <div className="absolute top-[30%] right-[30%] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
+        <div className="absolute bottom-[5%] left-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
+        <div className="absolute top-[5%] right-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
       </div>
       <div className='flex flex-col justify-center items-center w-full h-auto py-20'>
         <div className="container flex justify-center items-center mb-2">

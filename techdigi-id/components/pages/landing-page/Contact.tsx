@@ -171,9 +171,8 @@ function Contact() {
   return (
     <section id="contact" className='relative'>
         <div className='z-10'>
-          <div className="absolute top-[10%] -right-[400px] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
-          <div className="absolute bottom-[10%] left-[-100px] h-[80%] w-[300px] aspect-video bg-colorfull-blue blur-[250px]" />
-        <div className="absolute bottom-[10%] left-[200px] h-1/5 w-[400px] aspect-video bg-colorfull-blue blur-[250px]" />
+          <div className="absolute top-[10%] -left-[400px] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
+          <div className="absolute bottom-[10%] right-[-100px] h-1/2 w-[300px] aspect-video bg-colorfull-blue blur-[250px]" />
       </div>
       <div className="container flex items-center justify-center w-full min-h-[500px] py-20 mx-auto">
         <div className="px-4 container py-20 z-[50]">

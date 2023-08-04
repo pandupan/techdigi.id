@@ -10,9 +10,9 @@ function Project() {
   return (
     <section id="projects" className='relative'>
         <div className='z-10'>
-          <div className="absolute top-[40%] left-[35%] w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[250px]" />
-          <div className="absolute top-[40%] left-0 w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[250px]" />
-          <div className="absolute top-[40%] right-0 w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[250px]" />
+          <div className="absolute top-[40%] left-[35%] w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[200px] " />
+          <div className="absolute top-[40%] left-[15%] w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[200px] " />
+          <div className="absolute top-[40%] left-[55%] w-[200px] h-1/2 aspect-video bg-colorfull-purple blur-[200px] " />
         </div>
       <div className="container py-10 mx-auto">
         <div className="flex items-end gap-2">

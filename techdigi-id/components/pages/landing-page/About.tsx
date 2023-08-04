@@ -15,7 +15,6 @@ const About = () => {
       <div className='z-10'>
         <div className="absolute top-[10%] -right-[400px] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
         <div className="absolute bottom-[10%] left-[-100px] h-[80%] w-[300px] aspect-video bg-colorfull-blue blur-[250px]" />
-        <div className="absolute bottom-[10%] left-[200px] h-1/5 w-[400px] aspect-video bg-colorfull-blue blur-[250px]" />
       </div>
       <div className='flex flex-wrap justify-evenly -mt-[10rem] container mx-auto h-auto'>
         <div className='flex items-center justify-center w-[250px] sm:w-[500px] md:w-1/4 lg:w-1/4 h-[650px] rounded-md sm:mt-[200px]'>
