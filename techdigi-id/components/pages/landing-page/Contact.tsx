@@ -169,34 +169,11 @@ function Contact() {
   };
 
   return (
-    <section id="contact">
-      <div className="container flex items-center justify-center w-full min-h-[500px] py-20 mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl uppercase flex flex-col lg:max-h-[150px] gap-2">
-          <motion.span
-            className="w-max bg-colorfull-red px-4 sm:px-10"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Are
-          </motion.span>
-          <motion.span
-            className="self-center bg-colorfull-yellow w-max px-4 sm:px-10"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            You
-          </motion.span>
-          <motion.span
-            className="w-max px-4 sm:px-10 bg-colorfull-blue"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Ready?
-          </motion.span>
-        </h1>
+    <section id="contact" className='relative'>
+        <div className='z-10'>
+          <div className="absolute top-[10%] -right-[400px] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
+          <div className="absolute bottom-[10%] left-[-100px] h-[80%] w-[300px] aspect-video bg-colorfull-blue blur-[250px]" />
+        <div className="absolute bottom-[10%] left-[200px] h-1/5 w-[400px] aspect-video bg-colorfull-blue blur-[250px]" />
       </div>
       <div className="container flex items-center justify-center w-full min-h-[500px] py-20 mx-auto">
         <div className="relative overflow-x-clip">
@@ -205,7 +182,24 @@ function Contact() {
         <div className="px-4 container py-20">
           <div className="flex flex-col lg:flex-row items-center sm:px-10 gap-x-4 gap-y-10 ">
             <div className="lg:basis-[50%] font-semibold sm:px-4 lg:px-0">
-              <h4 className="text-lg text-colorfull-yellow">Get In Touch</h4>
+            <h1 className="text-xl sm:text-3xl md:text-5xl uppercase flex flex-col lg:max-h-[150px] gap-2 mb-8">
+              <motion.span
+                className='font-semibold'
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Are
+              </motion.span>
+              <motion.span
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <span className='font-bold text-blue-500'>You Ready?</span>
+              </motion.span>
+            </h1>
+              <h4 className="text-lg text-blue-500">Get In Touch</h4>
               <h2 className="text-4xl sm:text-5xl">Let&apos;s Work Together!</h2>
               <motion.div
                 variants={containerShow}
@@ -239,7 +233,7 @@ function Contact() {
                 <div>
                   <input
                     type="text"
-                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    className="w-full bg-transparent rounded-md border-2 border-gray-800 px-4 py-2 outline-none placeholder:text-black"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
@@ -250,7 +244,7 @@ function Contact() {
                 <div>
                   <input
                     type="email"
-                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    className="w-full bg-transparent rounded-md border-2 border-gray-800 px-4 py-2 outline-none placeholder:text-black"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address"
@@ -261,7 +255,7 @@ function Contact() {
                 <div className="col-span-2">
                   <input
                     type="text"
-                    className="w-full bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black"
+                    className="w-full bg-transparent rounded-md border-2 border-gray-800 px-4 py-2 outline-none placeholder:text-black"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Subject"
@@ -271,7 +265,7 @@ function Contact() {
                 </div>
                 <div className="col-span-2">
                   <textarea
-                    className="w-full h-[200px] sm:h-[250px] bg-transparent rounded-md border-2 border-colorfull-blue px-4 py-2 outline-none placeholder:text-black resize-none"
+                    className="w-full h-[200px] sm:h-[250px] bg-transparent rounded-md border-2 border-gray-800 px-4 py-2 outline-none placeholder:text-black resize-none"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Message"
@@ -281,7 +275,7 @@ function Contact() {
                 </div>
                 <div className="col-span-2">
                   <button className="w-full px-10 py-4 rounded-full bg-colorfull-blue text-white" onClick={handleEmailClick}>
-                    Submit
+                    Contact Us Via Email
                   </button>
                   <button className="w-full px-10 py-4 rounded-full bg-colorfull-green text-white my-2 " onClick={handleWhatsAppClick}>
                     Contact Us Via Whatsapp

@@ -10,12 +10,17 @@ import {SlCalender} from 'react-icons/sl'
 
 function Proces() {
   return (
-    <section id="process">
+    <section id="process" className='container mx-auto relative'>
+      <div className='z-10'>
+        <div className="absolute top-[20%] right-[30%] w-[600px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
+        <div className="absolute top-[5%] left-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px]" />
+        <div className="absolute bottom-[5%] right-[0%] w-[300px] h-1/2 aspect-video bg-colorfull-blue blur-[250px] " />
+      </div>
       <div className='flex flex-col justify-center items-center w-full h-auto py-20'>
-        <div className="container flex justify-center items-center mb-10">
-          <h1 className="w-max text-3xl sm:text-5xl md:text-7xl uppercase flex flex-col gap-y-2">
+        <div className="container flex justify-center items-center mb-2">
+          <h1 className="text-xl sm:text-3xl md:text-5xl uppercase flex flex-col gap-y-2 z-[50]">
             <motion.span
-              className="sm:pl-20 whitespace-nowrap"
+              className='font-semibold'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -23,20 +28,11 @@ function Proces() {
               Our Procces 
             </motion.span>
             <motion.span
-              className="self-center sm:self-start bg-colorfull-blue w-max"
-              initial={{ y: -50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Doing
-            </motion.span>
-            <motion.span
-              className="self-end text-colorfull-red"
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              With You?
+              With <span className='font-bold text-blue-500'>You?</span>
             </motion.span>
           </h1>
         </div>
@@ -45,7 +41,7 @@ function Proces() {
           
           <div className="flex justify-end items-end mx-auto my-4">
             <Card
-              className="m-6 max-w-sm"
+              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <TbTargetArrow size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -72,7 +68,7 @@ function Proces() {
           </div>
           <div className="flex justify-center items-center mx-auto my-4">
             <Card
-              className="m-6 max-w-sm"
+              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <HiMiniTrophy size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -97,7 +93,7 @@ function Proces() {
           </div>
           <div className="flex justify-start items-start mx-auto my-4">
             <Card
-              className="m-6 max-w-sm"
+              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <SlCalender size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -118,7 +114,7 @@ function Proces() {
               </p>
             </Card>
           </div>
-
+    
 
         </div>
 

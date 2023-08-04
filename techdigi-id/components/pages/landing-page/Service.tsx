@@ -23,6 +23,7 @@ const Service = () => {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className='font-semibold'
             >
               Our Service 
             </motion.span>
@@ -31,7 +32,7 @@ const Service = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Is All You Need
+              Is All YOU <span className='font-bold text-blue-500'>NEED</span>
             </motion.span>
           </h1>
         </div>
@@ -40,7 +41,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50]"
+          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
@@ -57,7 +58,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50]"
+          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
@@ -74,7 +75,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50]"
+          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
