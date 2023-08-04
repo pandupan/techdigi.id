@@ -50,7 +50,7 @@ const About = () => {
       
         <div className="px-4 py-4 sm:py-20 z-50">
           <div className="sm:container overflow-x-hidden">
-            <h1 className="text-xl sm:text-3xl md:text-5xl uppercase flex flex-col lg:max-h-[40px] lg:gap-2 lg:mt-[130px]">
+            <h1 className="ml-2 sm:ml-0 text-xl sm:text-3xl md:text-5xl uppercase flex flex-col lg:max-h-[40px] lg:gap-2 lg:mt-[130px]">
             <motion.span
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -75,7 +75,7 @@ const About = () => {
               className="max-w-[800px] mx-auto p-6 sm:px-8 sm:py-12 rounded-md bg-white border border-gray-600 mt-4 md:[90px] lg:mt-[120px]"
             >
               <h1 className="text-xl sm:text-2xl tracking-widest uppercase font-bold">Tech Digi Indonesia.</h1>
-              <p className="sm:text-lg max-w-2xl mt-4 mb-6 text-justify">
+              <p className="sm:text-lg max-w-2xl mt-4 mb-6 text-left sm:text-justify">
                 <span className="text-colorfull-blue font-semibold">Techdigi.id</span>  bergerak dibidang jasa berbasis teknologi diantaran pembuatan<span className="text-blue-500 font-semibold">  Creative Content, Branding Marketing, Web developer, Mobile Apps, Fotography, serta Konsulatasi digital.</span> perusahaan yang memiliki visioner yang terfokus pada pengembangan bisnis terintegrasi berbasis teknologi dan informasi
               </p>
               <Disclosure>              

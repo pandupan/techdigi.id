@@ -176,13 +176,10 @@ function Contact() {
         <div className="absolute bottom-[10%] left-[200px] h-1/5 w-[400px] aspect-video bg-colorfull-blue blur-[250px]" />
       </div>
       <div className="container flex items-center justify-center w-full min-h-[500px] py-20 mx-auto">
-        <div className="relative overflow-x-clip">
-          <div className="absolute left-[50%] top-[30%] w-[300px] aspect-square bg-colorfull-blue -z-10 blur-[250px]" />
-        </div>
-        <div className="px-4 container py-20">
+        <div className="px-4 container py-20 z-[50]">
           <div className="flex flex-col lg:flex-row items-center sm:px-10 gap-x-4 gap-y-10 ">
             <div className="lg:basis-[50%] font-semibold sm:px-4 lg:px-0">
-            <h1 className="text-xl sm:text-3xl md:text-5xl uppercase flex flex-col lg:max-h-[150px] gap-2 mb-8">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl uppercase flex flex-col lg:max-h-[150px] gap-2 mb-4 sm:mb-8">
               <motion.span
                 className='font-semibold'
                 initial={{ x: -100, opacity: 0 }}

@@ -16,7 +16,7 @@ function Project() {
         </div>
       <div className="container py-10 mx-auto">
         <div className="flex items-end gap-2">
-          <h1 className="text-xl sm:text-3xl md:text-5xl uppercase ml-2">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl uppercase ml-6 sm:ml-2">
             <motion.span
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}

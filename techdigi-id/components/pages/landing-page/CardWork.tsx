@@ -37,7 +37,7 @@ const CardWork: React.FC<CardWorkProps> = ({ item }) => {
 
   return (
     <motion.div
-      className="relative aspect-square w-[400px] h-[400px] rounded-md bg-gray-200 bg-opacity-10 backdrop-blur-sm overflow-hidden group"
+      className="relative aspect-square sm:w-[250px] sm:h-[250px] sm:mx-auto lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] rounded-md bg-gray-200 bg-opacity-10 backdrop-blur-sm overflow-hidden group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

@@ -41,7 +41,7 @@ function Proces() {
           
           <div className="flex justify-end items-end mx-auto my-4">
             <Card
-              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+              className="m-6 sm:m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <TbTargetArrow size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -68,7 +68,7 @@ function Proces() {
           </div>
           <div className="flex justify-center items-center mx-auto my-4">
             <Card
-              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+              className="m-6 sm:m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <HiMiniTrophy size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -93,7 +93,7 @@ function Proces() {
           </div>
           <div className="flex justify-start items-start mx-auto my-4">
             <Card
-              className="m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+              className="m-6 sm:m-2 max-w-sm z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             >
               <SlCalender size={50}/>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

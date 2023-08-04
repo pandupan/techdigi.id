@@ -42,18 +42,23 @@ const Header = () => {
     <div style={{backgroundColor:`${color}`}} className="fixed left-0 top-0 w-full z-[999] ease-in duration-300">
       <div className="max-w-[11240px] m-auto flex justify-between items-center text-white my-[6px]">
         <Link href='#hero'>
-          <div className='flex flex-col items-center justify-center'>
-          <Image
-            src="/images/logo.png"
-            width={40}
-            height={40}
-            alt="Logo Company"
-            className="sm:ml-4 sm:p-4 mr-2 ml-1 p-2 w-[50px] h-[35px] sm:w-auto sm:h-auto "
-          />
-          <div className='ml-2 sm:ml-8 text-xs sm:tracking-[2.5px]' style={{color:`${textColor}`}}>
-            <h2 className='font-bold'>TECH DIGI</h2>       
-            <h2 className='font-bold'>INDONESIA</h2>       
-          </div>
+          <div className='flex justify-center items-center'>
+            <div className='flex flex-col items-center justify-center'>
+              <Image
+                src="/images/logo.png"
+                width={40}
+                height={40}
+                alt="Logo Company"
+                className="sm:ml-4 sm:p-4 mr-2 ml-1 p-2 w-[50px] h-[35px] sm:w-auto sm:h-auto "
+              />
+              <div className='ml-2 sm:ml-8 text-xs sm:tracking-[2.5px]' style={{color:`${textColor}`}}>
+                <h2 className='font-bold'>TECH DIGI</h2>       
+                <h2 className='font-bold'>INDONESIA</h2>       
+              </div>
+            </div>
+            <div className='ml-2 sm:ml-4 text-xs sm:tracking-[1.5px]' style={{color:`${textColor}`}}>
+              <h2 className='font-semibold italic '>&quot;Wujudkan Inovasi Digitalmu!&quot;</h2>             
+            </div>
           </div>
         </Link>
         

@@ -41,7 +41,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+          className="m-6 sm:m-0 max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
@@ -58,7 +58,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+          className="m-6 sm:m-0 max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
@@ -75,7 +75,7 @@ const Service = () => {
         <Card
           imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="/images/hero-section1.png"
-          className="max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+          className="m-6 sm:m-0 max-w-[300px] max-h-[600px] z-[50] shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <p>
